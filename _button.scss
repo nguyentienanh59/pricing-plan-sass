@@ -1,0 +1,21 @@
+%button {
+    font-family: "Montserrat";
+    font-style: normal;
+    letter-spacing: 0.95px;
+    width: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 19px;
+    color: $colorTextBtn;
+    text-transform: uppercase;
+    background-color: $bgBtn;
+    border: none;
+    border-radius: 75px;
+    margin: 30px 25px 35px 50px;
+    &:hover {
+        background-color: $colorBtnHover;
+        cursor: pointer;
+      }
+  }
+
