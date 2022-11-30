@@ -1,7 +1,7 @@
 @import "./variables";
 @import "./reset";
 @import "./button";
-@import "./tex-trasform";
+@import "./tex-transform";
 @import "./price-common";
 @import "./plan-header-comon";
 
@@ -11,12 +11,18 @@
     grid-template-columns: repeat(auto-fit, 39.1rem);
     justify-content: center;
     padding: 75px;
-    @media (min-width: 768px) and (max-width: 1023px) {
+    // @media (min-width: 768px) and (max-width: 1023px) {
+    //   grid-gap: 55px;
+    // }
+    // @media (max-width: 767px) {
+    //   grid-template-columns: repeat(auto-fit, 340px);
+    //   grid-gap: 55px;
+    // }
+    @media (max-width: 1023px) {
       grid-gap: 55px;
     }
     @media (max-width: 767px) {
       grid-template-columns: repeat(auto-fit, 340px);
-      grid-gap: 55px;
     }
   }
 
@@ -49,7 +55,7 @@
     .title {
       @extend %plan-header-common;
       letter-spacing: 1.8px;
-      @extend %text-trasnform;
+      @extend %text-transform;
       color: $colorTextHeader;
       font-weight: 700;
       font-size: 36px;
@@ -58,7 +64,7 @@
     .desc {
       @extend %plan-header-common;
       letter-spacing: 1.8px;
-      @extend %text-trasnform;
+      @extend %text-transform;
       color: $colorTextHeader;
       font-weight: 400;
       font-size: 36px;
@@ -66,9 +72,8 @@
     }
   }
   &-content {
-    border-style: solid;
-    border-color: $colorTextContent;
-    border-width: 0px 1px 1px 1px;
+    border: 1px solid $colorTextContent;
+    border-top: 0;
     .desc-list {
       @extend %price-common;
       list-style: none;
@@ -76,13 +81,13 @@
         font-size: 16px;
         line-height: 52px;
         color: $colorTextli;
-        padding: 0px 0px 0px 15px;
+        padding-left: 15px;
         &:nth-child(odd) {
           background-color: #f4f6f7;
         }
       }
       .fa-check-square {
-        padding: 0px 15px 0px 0px;
+        padding-right: 15px;
         color: $colorTextSmall;
       }
     }
@@ -106,7 +111,7 @@
   }
 }
 .status {
-  @extend %text-trasnform;
+  @extend %text-transform;
   background-color: $bgColor;
   position: absolute;
   border-radius: 50%;
@@ -128,4 +133,3 @@
 .bg-life {
   background-color: $bgLife;
 }
-
