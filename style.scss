@@ -11,13 +11,6 @@
     grid-template-columns: repeat(auto-fit, 39.1rem);
     justify-content: center;
     padding: 75px;
-    // @media (min-width: 768px) and (max-width: 1023px) {
-    //   grid-gap: 55px;
-    // }
-    // @media (max-width: 767px) {
-    //   grid-template-columns: repeat(auto-fit, 340px);
-    //   grid-gap: 55px;
-    // }
     @media (max-width: 1023px) {
       grid-gap: 55px;
     }
@@ -133,3 +126,4 @@
 .bg-life {
   background-color: $bgLife;
 }
+
