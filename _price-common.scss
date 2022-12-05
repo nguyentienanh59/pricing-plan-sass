@@ -1,0 +1,12 @@
+@import "./variables";
+
+%price-common {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+  }
+  small {
+    @extend %price-common;
+    color: $colorTextSmall;
+  }
+  

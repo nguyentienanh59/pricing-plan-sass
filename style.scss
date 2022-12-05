@@ -1,0 +1,129 @@
+@import "./variables";
+@import "./reset";
+@import "./button";
+@import "./tex-transform";
+@import "./price-common";
+@import "./plan-header-comon";
+
+.plan {
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 39.1rem);
+    justify-content: center;
+    padding: 75px;
+    @media (max-width: 1023px) {
+      grid-gap: 55px;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(auto-fit, 340px);
+    }
+  }
+
+  &-col {
+    position: relative;
+    .price {
+      background-color: $bgPrice;
+      position: absolute;
+      text-align: center;
+      padding-top: 35px;
+      border-radius: 50%;
+      height: 12rem;
+      width: 12rem;
+      top: -3.53em;
+      left: 13%;
+      transform: translate(8%);
+      h1 {
+        @extend %price-common;
+        font-size: 32px;
+        color: $colorPrice;
+        line-height: 30px;
+      }
+      small {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+  &-header {
+    .title {
+      @extend %plan-header-common;
+      letter-spacing: 1.8px;
+      @extend %text-transform;
+      color: $colorTextHeader;
+      font-weight: 700;
+      font-size: 36px;
+      padding: 25% 0% 0% 5%;
+    }
+    .desc {
+      @extend %plan-header-common;
+      letter-spacing: 1.8px;
+      @extend %text-transform;
+      color: $colorTextHeader;
+      font-weight: 400;
+      font-size: 36px;
+      padding: 0% 0% 10% 5%;
+    }
+  }
+  &-content {
+    border: 1px solid $colorTextContent;
+    border-top: 0;
+    .desc-list {
+      @extend %price-common;
+      list-style: none;
+      li {
+        font-size: 16px;
+        line-height: 52px;
+        color: $colorTextli;
+        padding-left: 15px;
+        &:nth-child(odd) {
+          background-color: #f4f6f7;
+        }
+      }
+      .fa-check-square {
+        padding-right: 15px;
+        color: $colorTextSmall;
+      }
+    }
+  }
+  &-desc {
+    padding: 23px 0px 23px 15px;
+    p {
+      @extend %price-common;
+      font-size: 24px;
+      color: $colorP;
+    }
+    small {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+  &-btn {
+    button {
+      @extend %button;
+    }
+  }
+}
+.status {
+  @extend %text-transform;
+  background-color: $bgColor;
+  position: absolute;
+  border-radius: 50%;
+  padding: 25px 15px;
+  top: -2.13em;
+  left: 42%;
+  transform: translate(8%);
+  h4 {
+    font-size: 1.9rem;
+    color: $colorTextHeader;
+  }
+}
+.bg-basic {
+  background-color: $bgBasic;
+}
+.bg-advanced {
+  background-color: $bgAdv;
+}
+.bg-life {
+  background-color: $bgLife;
+}
+
